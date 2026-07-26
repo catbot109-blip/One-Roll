@@ -103,17 +103,31 @@ albedo_texture = ExtResource("1_iwpo4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_yobb1"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_2dkg6"]
-size = Vector3(5.67334, 0.037487306, 5.88916)
-
 [sub_resource type="BoxMesh" id="BoxMesh_204hi"]
 size = Vector3(0.21875, 0.59472656, 1.916626)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pbcr8"]
 size = Vector3(1, 1, 1.2726173)
 
+[sub_resource type="BoxMesh" id="BoxMesh_vd578"]
+size = Vector3(0.12359619, 0.11035156, 2.351471)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7tqt"]
+size = Vector3(0.61035156, 0.5101929, 1.5696192)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nl27k"]
+size = Vector3(0.21149063, 0.06347656, 2.351471)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e886h"]
+size = Vector3(1, 0.6121826, 1.4647217)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2dkg6"]
+size = Vector3(5.67334, 0.037487306, 5.88916)
+
 [sub_resource type="BoxMesh" id="BoxMesh_e886h"]
 size = Vector3(4.3706665, 0.4482422, 0.13842773)
+
+[sub_resource type="MeshLibrary" id="MeshLibrary_e886h"]
 
 [node name="Node3D" type="Node3D" unique_id=957488507]
 
@@ -162,23 +176,63 @@ mesh = SubResource("BoxMesh_yobb1")
 
 [node name="waterhouse" type="Node" parent="." unique_id=1298833414]
 
-[node name="floor" type="MeshInstance3D" parent="waterhouse" unique_id=443369445]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.912433, 0.02446635, 2.44458)
-material_override = ExtResource("2_vd578")
-mesh = SubResource("BoxMesh_2dkg6")
-
-[node name="walls" type="MeshInstance3D" parent="waterhouse" unique_id=909106426]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0568386, -6.008628, 0.19111812, 4.3751087)
+[node name="walls2" type="MeshInstance3D" parent="waterhouse" unique_id=1974340976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1169078, -6.017256, 0.25873673, 0.0035603046)
 material_override = ExtResource("3_c7tqt")
 gi_lightmap_texel_scale = 1.595
 mesh = SubResource("BoxMesh_204hi")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/walls" unique_id=1707260371]
+[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/walls2" unique_id=434381891]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/walls/StaticBody3D" unique_id=1792382687]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/walls2/StaticBody3D" unique_id=397238720]
 transform = Transform3D(0.23270586, 0, 0, 0, 0.6259997, 0, 0, 0, 1.5158849, 0, 0, -0.0022187233)
 shape = SubResource("BoxShape3D_pbcr8")
+
+[node name="walls3" type="MeshInstance3D" parent="waterhouse" unique_id=147463842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1169078, -6.017256, 0.29292703, 4.4711914)
+material_override = ExtResource("3_c7tqt")
+gi_lightmap_texel_scale = 1.595
+mesh = SubResource("BoxMesh_204hi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/walls3" unique_id=2106581258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.021274567, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/walls3/StaticBody3D" unique_id=2079927204]
+transform = Transform3D(0.23270586, 0, 0, 0, 0.6259997, 0, 0, 0, 1.5158849, 0, 0, -0.0022187233)
+shape = SubResource("BoxShape3D_pbcr8")
+
+[node name="walls4" type="MeshInstance3D" parent="waterhouse" unique_id=6298419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1169078, -6.0648327, 0.115587234, 2.2401538)
+material_override = ExtResource("3_c7tqt")
+gi_lightmap_texel_scale = 1.595
+mesh = SubResource("BoxMesh_vd578")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/walls4" unique_id=297267401]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/walls4/StaticBody3D" unique_id=1433443132]
+transform = Transform3D(0.23270586, 0, 0, 0, 0.6259997, 0, 0, 0, 1.5158848, 0.0323267, -0.07356948, -0.023898602)
+shape = SubResource("BoxShape3D_c7tqt")
+
+[node name="walls5" type="MeshInstance3D" parent="waterhouse" unique_id=711113337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1169078, -6.0208855, 0.029493093, 2.2401538)
+material_override = ExtResource("3_c7tqt")
+gi_lightmap_texel_scale = 1.595
+mesh = SubResource("BoxMesh_nl27k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/walls5" unique_id=663230652]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/walls5/StaticBody3D" unique_id=1649068100]
+transform = Transform3D(0.23270586, 0, 0, 0, 0.6259997, 0, 0, 0, 1.5158848, 0, -0.12138678, 0.060603857)
+shape = SubResource("BoxShape3D_e886h")
+
+[node name="floor" type="MeshInstance3D" parent="waterhouse" unique_id=443369445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.912433, 4.8428774e-06, 2.44458)
+material_override = ExtResource("2_vd578")
+mesh = SubResource("BoxMesh_2dkg6")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=278534655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59310913, 0.15116036, -3.0765328)
 mesh = SubResource("BoxMesh_e886h")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1455233375]
+mesh_library = SubResource("MeshLibrary_e886h")
