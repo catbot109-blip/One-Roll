@@ -12,9 +12,21 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_bu0v1")
 
 [sub_resource type="Environment" id="Environment_fb3t6"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.9098039, 0.6039216, 0.35686275, 1)
 sky = SubResource("Sky_iwpo4")
+ambient_light_source = 2
+ambient_light_color = Color(1, 0.8784314, 0.6901961, 1)
+ambient_light_energy = 0.8
 glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.78431374, 0.60784316, 0.42745098, 1)
+fog_density = 0.015
+fog_height = 10.0
+adjustment_enabled = true
+adjustment_brightness = 1.1
+adjustment_contrast = 1.15
+adjustment_saturation = 1.2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_i33xl"]
 size = Vector2(40, 40)
@@ -102,6 +114,14 @@ size = Vector3(0.21875, 0.59472656, 1.916626)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2037604711]
 environment = SubResource("Environment_fb3t6")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=378533177]
+transform = Transform3D(0.8660254, -0.35355338, 0.35355338, 0, 0.70710677, 0.70710677, -0.5, -0.6123724, 0.6123724, 0, 0, 0)
+light_color = Color(1, 0.8235294, 0.47843137, 1)
+light_energy = 1.2
+shadow_enabled = true
+shadow_bias = 0.5
+shadow_normal_bias = 1.0
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1597011387]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 light_color = Color(1, 1, 0.6627451, 1)
@@ -148,7 +168,7 @@ material_override = ExtResource("2_vd578")
 mesh = SubResource("BoxMesh_2dkg6")
 
 [node name="walls" type="MeshInstance3D" parent="waterhouse" unique_id=909106426]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.008628, 0.19111812, 4.3751087)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0568386, -6.008628, 0.19111812, 4.3751087)
 material_override = ExtResource("3_c7tqt")
 gi_lightmap_texel_scale = 1.595
 mesh = SubResource("BoxMesh_204hi")
