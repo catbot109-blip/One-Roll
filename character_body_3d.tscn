@@ -15,7 +15,7 @@ sky = SubResource("Sky_iwpo4")
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_i33xl"]
-size = Vector2(20, 20)
+size = Vector2(40, 40)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vd578"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
@@ -103,10 +103,10 @@ shadow_enabled = true
 mesh = SubResource("PlaneMesh_i33xl")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1024602641]
-transform = Transform3D(9.966393, 0, 0, 0, 1.826037, 0, 0, 0, 10.01517, 0, 0, 0)
+transform = Transform3D(9.966393, 0, 0, 0, 1.826037, 0, 0, 0, 9.93653, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1485823917]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9994763, 0, 0, 0)
+transform = Transform3D(2.0085444, 0, 0, 0, 1.0000001, 0, 0, 0, 2.0031588, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_vd578")
 debug_color = Color(0.58792806, 0.53731513, 1, 0.41960785)
 
