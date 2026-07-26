@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://b0fvss7b4l8r"]
 
 [ext_resource type="Texture2D" uid="uid://baip2s42n8kr0" path="res://icon.svg" id="1_iwpo4"]
-[ext_resource type="Material" uid="uid://gr484joa3aif" path="res://floormaterial.tres" id="2_vd578"]
-[ext_resource type="Material" uid="uid://db0sdfki1mra7" path="res://wallmaterial.tres" id="3_c7tqt"]
+[ext_resource type="PackedScene" uid="uid://cho8td66lms1c" path="res://waterhouse.glb" id="2_fb3t6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bu0v1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -103,12 +102,6 @@ albedo_texture = ExtResource("1_iwpo4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_yobb1"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_2dkg6"]
-size = Vector3(5.67334, 0.037487306, 5.88916)
-
-[sub_resource type="BoxMesh" id="BoxMesh_204hi"]
-size = Vector3(0.21875, 0.59472656, 1.916626)
-
 [node name="Node3D" type="Node3D" unique_id=957488507]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2037604711]
@@ -156,13 +149,5 @@ mesh = SubResource("BoxMesh_yobb1")
 
 [node name="waterhouse" type="Node" parent="." unique_id=1298833414]
 
-[node name="floor" type="MeshInstance3D" parent="waterhouse" unique_id=443369445]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.912433, 0.02446635, 2.44458)
-material_override = ExtResource("2_vd578")
-mesh = SubResource("BoxMesh_2dkg6")
-
-[node name="walls" type="MeshInstance3D" parent="waterhouse" unique_id=909106426]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0568386, -6.008628, 0.19111812, 4.3751087)
-material_override = ExtResource("3_c7tqt")
-gi_lightmap_texel_scale = 1.595
-mesh = SubResource("BoxMesh_204hi")
+[node name="waterhouse" parent="waterhouse" unique_id=331122273 instance=ExtResource("2_fb3t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.289869, 0, 0)
