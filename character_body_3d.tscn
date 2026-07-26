@@ -109,6 +109,9 @@ size = Vector3(5.67334, 0.037487306, 5.88916)
 [sub_resource type="BoxMesh" id="BoxMesh_204hi"]
 size = Vector3(0.21875, 0.59472656, 1.916626)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pbcr8"]
+size = Vector3(1, 1, 1.2726173)
+
 [node name="Node3D" type="Node3D" unique_id=957488507]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2037604711]
@@ -166,3 +169,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0568386, -6.008628, 0.19111812
 material_override = ExtResource("3_c7tqt")
 gi_lightmap_texel_scale = 1.595
 mesh = SubResource("BoxMesh_204hi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/walls" unique_id=1707260371]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/walls/StaticBody3D" unique_id=1792382687]
+transform = Transform3D(0.23270586, 0, 0, 0, 0.6259997, 0, 0, 0, 1.5158849, 0, 0, -0.0022187233)
+shape = SubResource("BoxShape3D_pbcr8")
