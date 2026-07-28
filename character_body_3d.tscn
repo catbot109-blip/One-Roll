@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://baip2s42n8kr0" path="res://icon.svg" id="1_iwpo4"]
 [ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="2_fb3t6"]
+[ext_resource type="PackedScene" uid="uid://cp3epv4giuawx" path="res://table.glb" id="3_vd578"]
+[ext_resource type="PackedScene" uid="uid://c672g3bplm1m4" path="res://chair.glb" id="4_c7tqt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bu0v1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -273,3 +275,9 @@ mesh = SubResource("BoxMesh_e886h")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1455233375]
 mesh_library = SubResource("MeshLibrary_e886h")
+
+[node name="table" parent="." unique_id=1769146467 instance=ExtResource("3_vd578")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -5.7323804, 0.7844553, 1.2077402)
+
+[node name="chair" parent="." unique_id=745271942 instance=ExtResource("4_c7tqt")]
+transform = Transform3D(-0.0073287855, 0, -0.19986568, 0, 0.2, 0, 0.19986568, 0, -0.0073287855, -5.178236, 0.7876054, 1.2616465)
