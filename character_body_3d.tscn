@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://baip2s42n8kr0" path="res://icon.svg" id="1_iwpo4"]
 [ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="2_fb3t6"]
+[ext_resource type="PackedScene" uid="uid://cp3epv4giuawx" path="res://table.glb" id="3_vd578"]
+[ext_resource type="PackedScene" uid="uid://c672g3bplm1m4" path="res://chair.glb" id="4_c7tqt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bu0v1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -187,6 +189,8 @@ size = Vector3(4.3706665, 0.4482422, 0.13842773)
 
 [sub_resource type="MeshLibrary" id="MeshLibrary_e886h"]
 
+[sub_resource type="SphereMesh" id="SphereMesh_204hi"]
+
 [node name="Node3D" type="Node3D" unique_id=957488507]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2037604711]
@@ -273,3 +277,18 @@ mesh = SubResource("BoxMesh_e886h")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1455233375]
 mesh_library = SubResource("MeshLibrary_e886h")
+
+[node name="table" parent="." unique_id=1769146467 instance=ExtResource("3_vd578")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -5.7323804, 0.7844553, 1.2077402)
+
+[node name="chair" parent="." unique_id=745271942 instance=ExtResource("4_c7tqt")]
+transform = Transform3D(-0.0073287855, 0, -0.19986568, 0, 0.2, 0, 0.19986568, 0, -0.0073287855, -5.178236, 0.7876054, 1.2616465)
+
+[node name="chair2" parent="." unique_id=2073724370 instance=ExtResource("4_c7tqt")]
+transform = Transform3D(-0.028648442, 0, 0.19793755, 0, 0.2, 0, -0.19793755, 0, -0.028648442, -6.269348, 0.7876054, 1.3423764)
+
+[node name="table2" type="Node" parent="." unique_id=366678590]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="table2" unique_id=1282552589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = SubResource("SphereMesh_204hi")
