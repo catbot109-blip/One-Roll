@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0fvss7b4l8r"]
 
 [ext_resource type="Texture2D" uid="uid://baip2s42n8kr0" path="res://icon.svg" id="1_iwpo4"]
+[ext_resource type="PackedScene" uid="uid://cehmwt1gk07g5" path="res://notverycowboyhat.glb" id="1_obynr"]
 [ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="2_fb3t6"]
 [ext_resource type="PackedScene" uid="uid://cp3epv4giuawx" path="res://table.glb" id="3_vd578"]
 [ext_resource type="PackedScene" uid="uid://c672g3bplm1m4" path="res://chair.glb" id="4_c7tqt"]
@@ -180,7 +181,7 @@ albedo_texture = ExtResource("1_iwpo4")
 size = Vector3(1.569397, 24.653564, 6.329508)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_in4ag"]
-size = Vector3(26.744598, 25.070953, 1)
+size = Vector3(25.33226, 25.070953, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8soo2"]
 size = Vector3(1, 27.110474, 32.88098)
@@ -232,6 +233,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.534799, 0)
 [node name="Camera3D" type="Camera3D" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1276985998]
 fov = 90.0
 
+[node name="notverycowboyhat" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1619238862 instance=ExtResource("1_obynr")]
+transform = Transform3D(-0.22857992, 0, 0.07463524, 0, 0.28, 0, -0.058713052, 0, -0.2905677, -0.019812405, 0.33749163, -0.038889766)
+
 [node name="cubulous bubulous" type="MeshInstance3D" parent="." unique_id=322609065]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.4315014, -4.538266)
 material_override = SubResource("StandardMaterial3D_fb3t6")
@@ -251,7 +255,7 @@ shape = SubResource("BoxShape3D_i33xl")
 [node name="StaticBody3D2" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=1288369781]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D2" unique_id=732103583]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80571175, 0.75717545, 16.007732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1724968, 0.83157635, 15.964424)
 shape = SubResource("BoxShape3D_in4ag")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=1607030640]
@@ -263,7 +267,7 @@ shape = SubResource("BoxShape3D_i33xl")
 [node name="StaticBody3D4" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=995188902]
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D4" unique_id=749456744]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6114235, 1.5143509, -16.176622)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9052563, 1.5143509, -16.176622)
 shape = SubResource("BoxShape3D_in4ag")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=2107717154]
@@ -291,7 +295,7 @@ transform = Transform3D(-0.028648442, 0, 0.19793755, 0, 0.2, 0, -0.19793755, 0, 
 [node name="table2" type="Node" parent="." unique_id=366678590]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="table2" unique_id=1282552589]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61163807, 3.9280388, 4.52657)
 mesh = SubResource("SphereMesh_204hi")
 
 [node name="WATERmug" parent="." unique_id=1332201139 instance=ExtResource("5_nl27k")]
