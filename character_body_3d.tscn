@@ -173,7 +173,14 @@ albedo_texture = ExtResource("1_iwpo4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_yobb1"]
 
-[sub_resource type="PrismMesh" id="PrismMesh_e886h"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_i33xl"]
+size = Vector3(1.569397, 24.653564, 6.329508)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_in4ag"]
+size = Vector3(26.744598, 25.070953, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8soo2"]
+size = Vector3(1, 27.110474, 32.88098)
 
 [sub_resource type="BoxMesh" id="BoxMesh_e886h"]
 size = Vector3(4.3706665, 0.4482422, 0.13842773)
@@ -228,11 +235,37 @@ mesh = SubResource("BoxMesh_yobb1")
 [node name="waterhouse" type="Node" parent="." unique_id=1298833414]
 
 [node name="WATERHOUSSSFIXED" parent="waterhouse" unique_id=94385544 instance=ExtResource("2_fb3t6")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -5.797862, 1.2699866, -0.9276482)
+transform = Transform3D(0.2660739, 0, 0, 0, 0.1829387, 0, 0, 0, 0.2107332, -5.797862, 2.4533286, -0.9276482)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="waterhouse" unique_id=673113995]
-transform = Transform3D(-1.3769086e-08, 0.5, 0, -0.315, -2.1855694e-08, 0, 0, 0, 1, -5.1022983, -0.33180273, 2)
-mesh = SubResource("PrismMesh_e886h")
+[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=816208013]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D" unique_id=1988819678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.742589, 0.6964674, 13.460089)
+shape = SubResource("BoxShape3D_i33xl")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=1288369781]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D2" unique_id=732103583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80571175, 0.75717545, 16.007732)
+shape = SubResource("BoxShape3D_in4ag")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=1607030640]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D3" unique_id=1355041407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.006544, 1.3929358, -13.114304)
+shape = SubResource("BoxShape3D_i33xl")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=995188902]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D4" unique_id=749456744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6114235, 1.5143509, -16.176622)
+shape = SubResource("BoxShape3D_in4ag")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=2107717154]
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D5" unique_id=447594698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.149229, 0.416893, -0.24290991)
+shape = SubResource("BoxShape3D_8soo2")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=278534655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59310913, 0.15116036, -3.0765328)
