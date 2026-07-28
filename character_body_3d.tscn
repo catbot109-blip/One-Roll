@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="2_fb3t6"]
 [ext_resource type="PackedScene" uid="uid://cp3epv4giuawx" path="res://table.glb" id="3_vd578"]
 [ext_resource type="PackedScene" uid="uid://c672g3bplm1m4" path="res://chair.glb" id="4_c7tqt"]
+[ext_resource type="PackedScene" uid="uid://dwvjq6u5kuqms" path="res://WATERmug.glb" id="5_nl27k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bu0v1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -292,3 +293,6 @@ transform = Transform3D(-0.028648442, 0, 0.19793755, 0, 0.2, 0, -0.19793755, 0, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="table2" unique_id=1282552589]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("SphereMesh_204hi")
+
+[node name="WATERmug" parent="." unique_id=1332201139 instance=ExtResource("5_nl27k")]
+transform = Transform3D(0.115, 0, 0, 0, 0.108, 0, 0, 0, 0.11094717, -5.621439, 1.2669035, 1.2622867)
