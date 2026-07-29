@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dytem65vgc5v4" path="res://camera_3d.gd" id="1_18j2g"]
 [ext_resource type="PackedScene" uid="uid://bfb0bwow3gjxv" path="res://pewpewpistolofdespair2.glb" id="1_gy32l"]
+[ext_resource type="Script" uid="uid://dnnpnbv7x5sk5" path="res://character_body_3d.gd" id="1_m1lp5"]
 [ext_resource type="PackedScene" uid="uid://cehmwt1gk07g5" path="res://notverycowboyhat.glb" id="1_obynr"]
 [ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="2_fb3t6"]
 [ext_resource type="Script" uid="uid://gu8afi8yuqon" path="res://area_3d.gd" id="2_u3olo"]
@@ -279,6 +280,7 @@ animations = [{
 }]
 
 [node name="Node3D" type="Node3D" unique_id=957488507]
+script = ExtResource("1_m1lp5")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2037604711]
 environment = SubResource("Environment_fb3t6")
@@ -420,4 +422,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
 billboard = 1
 
 [node name="TalkAudio" type="AudioStreamPlayer3D" parent="Citizen" unique_id=912203757]
+stream = ExtResource("14_ltcqi")
+
+[node name="Citizen2" type="CharacterBody3D" parent="." unique_id=761477915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2431946, 0.11779785, 0)
+script = ExtResource("7_ew7rt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen2" unique_id=1218070737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
+shape = SubResource("BoxShape3D_nrhr1")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Citizen2" unique_id=980408929]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.576, 0)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_i33xl")
+animation = &"dead"
+
+[node name="Label3D" type="Label3D" parent="Citizen2" unique_id=52019481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
+billboard = 1
+
+[node name="TalkAudio" type="AudioStreamPlayer3D" parent="Citizen2" unique_id=2126697298]
+stream = ExtResource("14_ltcqi")
+
+[node name="Citizen3" type="CharacterBody3D" parent="." unique_id=721165983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5896356, 0.11779785, 0)
+script = ExtResource("7_ew7rt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen3" unique_id=636889844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
+shape = SubResource("BoxShape3D_nrhr1")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Citizen3" unique_id=1155536406]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.576, 0)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_i33xl")
+animation = &"dead"
+
+[node name="Label3D" type="Label3D" parent="Citizen3" unique_id=30868934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
+billboard = 1
+
+[node name="TalkAudio" type="AudioStreamPlayer3D" parent="Citizen3" unique_id=102566744]
 stream = ExtResource("14_ltcqi")

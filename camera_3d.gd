@@ -1,5 +1,5 @@
 extends Camera3D
-
+var is_murderer: bool = false
 @export var damage: int = 25
 @export var max_range: float = 100.0
 @export var fire_cooldown: float = 0.4

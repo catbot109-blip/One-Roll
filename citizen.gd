@@ -13,11 +13,19 @@ extends CharacterBody3D
 
 # Pitch variation range for the talk SFX
 @export var pitch_min: float = 0.95
-@export var pitch_max: float = 2
+@export var pitch_max: float = 2.0
+
+# Murder Settings
+@export var sheriff_safe_radius: float = 15.0 # How close the sheriff must be to prevent a murder
+@export var kill_range: float = 2.5           # Distance to victim to strike
+@export var kill_cooldown: float = 4.0        # Seconds between murders
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var label: Label3D = $Label3D
 @onready var talk_audio: AudioStreamPlayer3D = $TalkAudio
+
+# Finds the sheriff automatically
+@onready var sheriff: Node3D = get_tree().root.find_child("CharacterBody3D", true, false)
 
 var start_position: Vector3
 var target_position: Vector3
@@ -27,6 +35,7 @@ var is_waiting: bool = true
 var cooldown_timer: float = 0.0
 var dialogue_display_time: float = 0.0
 
+var kill_timer: float = 0.0
 var is_dead: bool = false
 
 func _ready() -> void:
@@ -38,6 +47,13 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
+
+	# Handle Murder Logic
+	if is_murderer:
+		if kill_timer > 0.0:
+			kill_timer -= delta
+		else:
+			_attempt_murder()
 
 	if cooldown_timer > 0.0:
 		cooldown_timer -= delta
@@ -73,6 +89,35 @@ func _physics_process(delta: float) -> void:
 	else:
 		if sprite.animation != "idle":
 			sprite.play("idle")
+
+func _attempt_murder() -> void:
+	if not sheriff:
+		return
+
+	# 1. Check if Sheriff is near
+	var dist_to_sheriff: float = global_position.distance_to(sheriff.global_position)
+	if dist_to_sheriff < sheriff_safe_radius:
+		return # SHERIFF NEAR. ACT NATURAL.
+
+	# 2. Look for nearby innocent victims
+	var all_nodes: Array = get_parent().get_children()
+	for victim in all_nodes:
+		if "Citizen" in victim.name and victim != self and not victim.is_queued_for_deletion():
+			if "is_dead" in victim and victim.is_dead:
+				continue
+				
+			var dist_to_victim: float = global_position.distance_to(victim.global_position)
+			if dist_to_victim < kill_range:
+				print("MURDER! ", name, " secretly eliminated ", victim.name, "!")
+				
+				# Triggers their death sequence
+				if victim.has_method("take_damage"):
+					victim.take_damage(100)
+				else:
+					victim.queue_free()
+				
+				kill_timer = kill_cooldown
+				return
 
 func _pick_new_target() -> void:
 	var random_offset := Vector3(
