@@ -22,7 +22,7 @@ var is_waiting: bool = true
 var cooldown_timer: float = 0.0
 var dialogue_display_time: float = 0.0
 
-var is_dead: bool = false
+# var is_dead: bool = false
 
 func _ready() -> void:
 	sprite.play("idle")
@@ -31,12 +31,12 @@ func _ready() -> void:
 	_pick_new_target()
 
 	# TEMP TEST - remove these two lines once you confirm death animation works
-	await get_tree().create_timer(3.0).timeout
-	_die()
+	# await get_tree().create_timer(3.0).timeout
+	# _die()
 
 func _physics_process(delta: float) -> void:
-	if is_dead:
-		return
+	# if is_dead:
+	# 	return
 
 	if cooldown_timer > 0.0:
 		cooldown_timer -= delta
@@ -83,7 +83,8 @@ func _pick_new_target() -> void:
 	is_waiting = false
 
 func can_interact() -> bool:
-	return cooldown_timer <= 0.0 and not is_dead
+	# Updated check so interaction works without checking is_dead
+	return cooldown_timer <= 0.0 # and not is_dead
 
 func interact() -> String:
 	if not can_interact():
@@ -98,11 +99,11 @@ func interact() -> String:
 	cooldown_timer = interact_cooldown
 	return line
 
-func _die() -> void:
-	if is_dead:
-		return
-
-	is_dead = true
-	sprite.play("dead")
-	await sprite.animation_finished
-	queue_free()
+# func _die() -> void:
+# 	if is_dead:
+# 		return
+# 
+# 	is_dead = true
+# 	sprite.play("dead")
+# 	await sprite.animation_finished
+# 	queue_free()
