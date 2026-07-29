@@ -394,7 +394,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.576, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_i33xl")
 animation = &"idle"
-frame_progress = 0.43557668
+frame_progress = 0.43583277
 
 [node name="Label3D" type="Label3D" parent="Citizen" unique_id=1571107136]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
