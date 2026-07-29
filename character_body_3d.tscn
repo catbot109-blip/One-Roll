@@ -1,16 +1,20 @@
 [gd_scene format=3 uid="uid://b0fvss7b4l8r"]
 
+[ext_resource type="Script" uid="uid://dytem65vgc5v4" path="res://camera_3d.gd" id="1_18j2g"]
+[ext_resource type="PackedScene" uid="uid://bfb0bwow3gjxv" path="res://pewpewpistolofdespair2.glb" id="1_gy32l"]
 [ext_resource type="PackedScene" uid="uid://cehmwt1gk07g5" path="res://notverycowboyhat.glb" id="1_obynr"]
 [ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="2_fb3t6"]
 [ext_resource type="Script" uid="uid://gu8afi8yuqon" path="res://area_3d.gd" id="2_u3olo"]
 [ext_resource type="Texture2D" uid="uid://xf70udc1gt63" path="res://mdurrr-removebg-preview.png" id="3_nvtkd"]
 [ext_resource type="PackedScene" uid="uid://cp3epv4giuawx" path="res://table.glb" id="3_vd578"]
+[ext_resource type="AudioStream" uid="uid://clibjhjjy1uhq" path="res://untitled.mp3" id="4_4wng8"]
 [ext_resource type="PackedScene" uid="uid://c672g3bplm1m4" path="res://chair.glb" id="4_c7tqt"]
 [ext_resource type="PackedScene" uid="uid://dwvjq6u5kuqms" path="res://WATERmug.glb" id="5_nl27k"]
 [ext_resource type="Script" uid="uid://cucs20auwfi30" path="res://citizen.gd" id="7_ew7rt"]
 [ext_resource type="Texture2D" uid="uid://bqgkb21hjdnm7" path="res://citizen_idle1.png" id="8_u3olo"]
 [ext_resource type="Texture2D" uid="uid://6vdysspkk6kj" path="res://dedcitizensprite.png" id="9_gy32l"]
 [ext_resource type="Texture2D" uid="uid://b0drufrv5fwlu" path="res://citizen_walk1.png" id="9_nvtkd"]
+[ext_resource type="AudioStream" uid="uid://mgo0ntjfxpjn" path="res://talksound.mp3" id="14_ltcqi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bu0v1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -202,7 +206,7 @@ size = Vector3(4.3706665, 0.4482422, 0.13842773)
 [sub_resource type="SphereMesh" id="SphereMesh_204hi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nrhr1"]
-size = Vector3(1, 1.1113281, 1)
+size = Vector3(0.33703613, 1.1113281, 0.28637695)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gy32l"]
 atlas = ExtResource("8_u3olo")
@@ -314,6 +318,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.534799, 0)
 
 [node name="Camera3D" type="Camera3D" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1276985998]
 fov = 90.0
+script = ExtResource("1_18j2g")
+
+[node name="GunAudio" type="AudioStreamPlayer3D" parent="MeshInstance3D/CharacterBody3D/Neck/Camera3D" unique_id=40472879]
+stream = ExtResource("4_4wng8")
+
+[node name="pewpewpistolofdespair2" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1600705181 instance=ExtResource("1_gy32l")]
+transform = Transform3D(-0.025446704, 0, 0.49935204, 0, 0.5, 0, -0.49935204, 0, -0.025446704, 0.121917486, -0.79804087, -0.6181464)
 
 [node name="notverycowboyhat" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1619238862 instance=ExtResource("1_obynr")]
 transform = Transform3D(-0.22857992, 0, 0.07463524, 0, 0.28, 0, -0.058713052, 0, -0.2905677, -0.019812405, 0.33749163, -0.038889766)
@@ -395,7 +406,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11779785, 0)
 script = ExtResource("7_ew7rt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen" unique_id=933185316]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.556, 0.034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
 shape = SubResource("BoxShape3D_nrhr1")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Citizen" unique_id=281419437]
@@ -407,3 +418,6 @@ animation = &"dead"
 [node name="Label3D" type="Label3D" parent="Citizen" unique_id=1571107136]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
 billboard = 1
+
+[node name="TalkAudio" type="AudioStreamPlayer3D" parent="Citizen" unique_id=912203757]
+stream = ExtResource("14_ltcqi")

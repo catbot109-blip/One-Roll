@@ -11,8 +11,13 @@ extends CharacterBody3D
 
 @export var interact_cooldown: float = 1.0
 
+# Pitch variation range for the talk SFX
+@export var pitch_min: float = 0.95
+@export var pitch_max: float = 2
+
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var label: Label3D = $Label3D
+@onready var talk_audio: AudioStreamPlayer3D = $TalkAudio
 
 var start_position: Vector3
 var target_position: Vector3
@@ -22,7 +27,7 @@ var is_waiting: bool = true
 var cooldown_timer: float = 0.0
 var dialogue_display_time: float = 0.0
 
-# var is_dead: bool = false
+var is_dead: bool = false
 
 func _ready() -> void:
 	sprite.play("idle")
@@ -30,13 +35,9 @@ func _ready() -> void:
 	start_position = global_position
 	_pick_new_target()
 
-	# TEMP TEST - remove these two lines once you confirm death animation works
-	# await get_tree().create_timer(3.0).timeout
-	# _die()
-
 func _physics_process(delta: float) -> void:
-	# if is_dead:
-	# 	return
+	if is_dead:
+		return
 
 	if cooldown_timer > 0.0:
 		cooldown_timer -= delta
@@ -83,8 +84,7 @@ func _pick_new_target() -> void:
 	is_waiting = false
 
 func can_interact() -> bool:
-	# Updated check so interaction works without checking is_dead
-	return cooldown_timer <= 0.0 # and not is_dead
+	return cooldown_timer <= 0.0 and not is_dead
 
 func interact() -> String:
 	if not can_interact():
@@ -97,13 +97,22 @@ func interact() -> String:
 	label.text = line
 	dialogue_display_time = 3.0
 	cooldown_timer = interact_cooldown
+
+	# Play dialogue sound effect immediately
+	if talk_audio and talk_audio.stream:
+		talk_audio.pitch_scale = randf_range(pitch_min, pitch_max)
+		talk_audio.play()
+
 	return line
 
-# func _die() -> void:
-# 	if is_dead:
-# 		return
-# 
-# 	is_dead = true
-# 	sprite.play("dead")
-# 	await sprite.animation_finished
-# 	queue_free()
+func take_damage(_amount: int) -> void:
+	if is_dead:
+		return
+	_die()
+
+func _die() -> void:
+	if is_dead:
+		return
+
+	is_dead = true
+	sprite.play("dead")
