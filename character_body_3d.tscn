@@ -394,49 +394,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.576, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_i33xl")
 animation = &"idle"
-frame_progress = 0.53357744
+frame_progress = 0.43557668
 
-[node name="Citizen2" type="CharacterBody3D" parent="." unique_id=669729360]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2747371, 0.11779785, 0)
-script = ExtResource("7_ew7rt")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen2" unique_id=883239820]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.556, 0.034)
-shape = SubResource("BoxShape3D_nrhr1")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Citizen2" unique_id=666486345]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.576, 0)
+[node name="Label3D" type="Label3D" parent="Citizen" unique_id=1571107136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
 billboard = 1
-sprite_frames = SubResource("SpriteFrames_i33xl")
-animation = &"idle"
-frame_progress = 0.7743714
-
-[node name="Citizen3" type="CharacterBody3D" parent="." unique_id=459806617]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.358201, 0.11779785, 0)
-script = ExtResource("7_ew7rt")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen3" unique_id=691663491]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.556, 0.034)
-shape = SubResource("BoxShape3D_nrhr1")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Citizen3" unique_id=1196476552]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.576, 0)
-billboard = 1
-sprite_frames = SubResource("SpriteFrames_i33xl")
-animation = &"idle"
-frame_progress = 0.7743714
-
-[node name="Citizen4" type="CharacterBody3D" parent="." unique_id=2144382702]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.361061, 0.11779785, 0)
-script = ExtResource("7_ew7rt")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen4" unique_id=1494419411]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.556, 0.034)
-shape = SubResource("BoxShape3D_nrhr1")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Citizen4" unique_id=718939276]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.576, 0)
-billboard = 1
-sprite_frames = SubResource("SpriteFrames_i33xl")
-animation = &"idle"
-frame_progress = 0.7743714
