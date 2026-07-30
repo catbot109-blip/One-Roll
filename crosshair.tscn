@@ -345,36 +345,36 @@ mesh = SubResource("BoxMesh_yobb1")
 
 [node name="waterhouse" type="Node" parent="." unique_id=1298833414]
 
-[node name="WATERHOUSSSFIXED" parent="waterhouse" unique_id=94385544 instance=ExtResource("8_i3uv4")]
+[node name="waterhouse" parent="waterhouse" unique_id=94385544 instance=ExtResource("8_i3uv4")]
 transform = Transform3D(0.2660739, 0, 0, 0, 0.1829387, 0, 0, 0, 0.2107332, -5.797862, 2.4533286, -0.9276482)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=816208013]
+[node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/waterhouse" unique_id=816208013]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D" unique_id=1988819678]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="waterhouse/waterhouse/StaticBody3D" unique_id=1988819678]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.742589, 0.6964674, 13.460089)
 shape = SubResource("BoxShape3D_i33xl")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=1288369781]
+[node name="StaticBody3D2" type="StaticBody3D" parent="waterhouse/waterhouse" unique_id=1288369781]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D2" unique_id=732103583]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="waterhouse/waterhouse/StaticBody3D2" unique_id=732103583]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1724968, 0.83157635, 15.964424)
 shape = SubResource("BoxShape3D_in4ag")
 
-[node name="StaticBody3D3" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=1607030640]
+[node name="StaticBody3D3" type="StaticBody3D" parent="waterhouse/waterhouse" unique_id=1607030640]
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D3" unique_id=1355041407]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="waterhouse/waterhouse/StaticBody3D3" unique_id=1355041407]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.006544, 1.3929358, -13.114304)
 shape = SubResource("BoxShape3D_i33xl")
 
-[node name="StaticBody3D4" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=995188902]
+[node name="StaticBody3D4" type="StaticBody3D" parent="waterhouse/waterhouse" unique_id=995188902]
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D4" unique_id=749456744]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="waterhouse/waterhouse/StaticBody3D4" unique_id=749456744]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9052563, 1.5143509, -16.176622)
 shape = SubResource("BoxShape3D_in4ag")
 
-[node name="StaticBody3D5" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=2107717154]
+[node name="StaticBody3D5" type="StaticBody3D" parent="waterhouse/waterhouse" unique_id=2107717154]
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="waterhouse/WATERHOUSSSFIXED/StaticBody3D5" unique_id=447594698]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="waterhouse/waterhouse/StaticBody3D5" unique_id=447594698]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.149229, 0.416893, -0.24290991)
 shape = SubResource("BoxShape3D_8soo2")
 
@@ -406,6 +406,7 @@ transform = Transform3D(0.115, 0, 0, 0, 0.108, 0, 0, 0, 0.11094717, -5.621439, 1
 [node name="Citizen" type="CharacterBody3D" parent="." unique_id=1136624608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11779785, 0)
 script = ExtResource("12_wbb3i")
+zone_name = "waterhouse"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen" unique_id=933185316]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
@@ -425,8 +426,9 @@ billboard = 1
 stream = ExtResource("16_gq0b6")
 
 [node name="Citizen2" type="CharacterBody3D" parent="." unique_id=761477915]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2431946, 0.11779785, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.258097, 0.11779785, 0)
 script = ExtResource("12_wbb3i")
+zone_name = "waterhouse"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen2" unique_id=1218070737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
@@ -446,8 +448,9 @@ billboard = 1
 stream = ExtResource("16_gq0b6")
 
 [node name="Citizen3" type="CharacterBody3D" parent="." unique_id=721165983]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5896356, 0.11779785, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5483937, 0.11779785, 0)
 script = ExtResource("12_wbb3i")
+zone_name = "waterhouse"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen3" unique_id=636889844]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)

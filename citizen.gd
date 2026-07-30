@@ -3,7 +3,7 @@ extends CharacterBody3D
 @export var is_murderer: bool = false
 @export var npc_name: String = "Citizen"
 @export var dialogue_lines: Array[String] = ["Howdy, sheriff.", "Nice day, ain't it?"]
-
+@export var zone_name: String = ""
 @export var wander_radius: float = 5.0
 @export var move_speed: float = 2.0
 @export var wait_time_min: float = 1.5
@@ -153,7 +153,13 @@ func interact() -> String:
 func take_damage(_amount: int) -> void:
 	if is_dead:
 		return
+
 	_die()
+
+	if is_murderer:
+		print("CASE SOLVED - you got the murderer!")
+	else:
+		print("You shot an innocent citizen! That's on you, sheriff.")
 
 func _die() -> void:
 	if is_dead:
