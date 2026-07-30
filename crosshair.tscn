@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://b0fvss7b4l8r"]
+[gd_scene format=3 uid="uid://djr7d70o2mofu"]
 
-[ext_resource type="Script" uid="uid://dytem65vgc5v4" path="res://camera_3d.gd" id="1_18j2g"]
-[ext_resource type="PackedScene" uid="uid://bfb0bwow3gjxv" path="res://pewpewpistolofdespair2.glb" id="1_gy32l"]
-[ext_resource type="Script" uid="uid://dnnpnbv7x5sk5" path="res://character_body_3d.gd" id="1_m1lp5"]
-[ext_resource type="PackedScene" uid="uid://cehmwt1gk07g5" path="res://notverycowboyhat.glb" id="1_obynr"]
-[ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="2_fb3t6"]
-[ext_resource type="Script" uid="uid://gu8afi8yuqon" path="res://area_3d.gd" id="2_u3olo"]
-[ext_resource type="Texture2D" uid="uid://xf70udc1gt63" path="res://mdurrr-removebg-preview.png" id="3_nvtkd"]
-[ext_resource type="PackedScene" uid="uid://cp3epv4giuawx" path="res://table.glb" id="3_vd578"]
-[ext_resource type="AudioStream" uid="uid://clibjhjjy1uhq" path="res://untitled.mp3" id="4_4wng8"]
-[ext_resource type="PackedScene" uid="uid://c672g3bplm1m4" path="res://chair.glb" id="4_c7tqt"]
-[ext_resource type="PackedScene" uid="uid://dwvjq6u5kuqms" path="res://WATERmug.glb" id="5_nl27k"]
-[ext_resource type="Script" uid="uid://cucs20auwfi30" path="res://citizen.gd" id="7_ew7rt"]
-[ext_resource type="Texture2D" uid="uid://bqgkb21hjdnm7" path="res://citizen_idle1.png" id="8_u3olo"]
-[ext_resource type="Texture2D" uid="uid://6vdysspkk6kj" path="res://dedcitizensprite.png" id="9_gy32l"]
-[ext_resource type="Texture2D" uid="uid://b0drufrv5fwlu" path="res://citizen_walk1.png" id="9_nvtkd"]
-[ext_resource type="AudioStream" uid="uid://mgo0ntjfxpjn" path="res://talksound.mp3" id="14_ltcqi"]
+[ext_resource type="Script" uid="uid://dnnpnbv7x5sk5" path="res://character_body_3d.gd" id="1_dhlgl"]
+[ext_resource type="Script" uid="uid://dytem65vgc5v4" path="res://camera_3d.gd" id="2_lfjj6"]
+[ext_resource type="AudioStream" uid="uid://clibjhjjy1uhq" path="res://untitled.mp3" id="3_wmfhc"]
+[ext_resource type="PackedScene" uid="uid://bfb0bwow3gjxv" path="res://pewpewpistolofdespair2.glb" id="4_7cmww"]
+[ext_resource type="PackedScene" uid="uid://cehmwt1gk07g5" path="res://notverycowboyhat.glb" id="5_hkqka"]
+[ext_resource type="Script" uid="uid://gu8afi8yuqon" path="res://area_3d.gd" id="6_bqrc1"]
+[ext_resource type="Texture2D" uid="uid://xf70udc1gt63" path="res://mdurrr-removebg-preview.png" id="7_f2g0p"]
+[ext_resource type="PackedScene" uid="uid://xc60ns1xl2r1" path="res://WATERHOUSSSFIXED.glb" id="8_i3uv4"]
+[ext_resource type="PackedScene" uid="uid://cp3epv4giuawx" path="res://table.glb" id="9_4oq76"]
+[ext_resource type="PackedScene" uid="uid://c672g3bplm1m4" path="res://chair.glb" id="10_naeu8"]
+[ext_resource type="PackedScene" uid="uid://dwvjq6u5kuqms" path="res://WATERmug.glb" id="11_ocw5u"]
+[ext_resource type="Script" uid="uid://cucs20auwfi30" path="res://citizen.gd" id="12_wbb3i"]
+[ext_resource type="Texture2D" uid="uid://6vdysspkk6kj" path="res://dedcitizensprite.png" id="13_xys1t"]
+[ext_resource type="Texture2D" uid="uid://bqgkb21hjdnm7" path="res://citizen_idle1.png" id="14_i55th"]
+[ext_resource type="Texture2D" uid="uid://b0drufrv5fwlu" path="res://citizen_walk1.png" id="15_7ooaw"]
+[ext_resource type="AudioStream" uid="uid://mgo0ntjfxpjn" path="res://talksound.mp3" id="16_gq0b6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bu0v1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -186,7 +186,7 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 radius = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18j2g"]
-albedo_texture = ExtResource("3_nvtkd")
+albedo_texture = ExtResource("7_f2g0p")
 
 [sub_resource type="BoxMesh" id="BoxMesh_yobb1"]
 
@@ -210,38 +210,38 @@ size = Vector3(4.3706665, 0.4482422, 0.13842773)
 size = Vector3(0.33703613, 1.1113281, 0.28637695)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gy32l"]
-atlas = ExtResource("8_u3olo")
+atlas = ExtResource("14_i55th")
 region = Rect2(0, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18j2g"]
-atlas = ExtResource("8_u3olo")
+atlas = ExtResource("14_i55th")
 region = Rect2(512, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ltcqi"]
-atlas = ExtResource("8_u3olo")
+atlas = ExtResource("14_i55th")
 region = Rect2(1024, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4wng8"]
-atlas = ExtResource("8_u3olo")
+atlas = ExtResource("14_i55th")
 region = Rect2(1536, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m1lp5"]
-atlas = ExtResource("9_nvtkd")
+atlas = ExtResource("15_7ooaw")
 region = Rect2(0, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_klace"]
-atlas = ExtResource("9_nvtkd")
+atlas = ExtResource("15_7ooaw")
 region = Rect2(512, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pqkp8"]
-atlas = ExtResource("9_nvtkd")
+atlas = ExtResource("15_7ooaw")
 region = Rect2(1024, 0, 512, 512)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i33xl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_gy32l")
+"texture": ExtResource("13_xys1t")
 }],
 "loop": 1,
 "name": &"dead",
@@ -280,7 +280,7 @@ animations = [{
 }]
 
 [node name="Node3D" type="Node3D" unique_id=957488507]
-script = ExtResource("1_m1lp5")
+script = ExtResource("1_dhlgl")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2037604711]
 environment = SubResource("Environment_fb3t6")
@@ -320,19 +320,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.534799, 0)
 
 [node name="Camera3D" type="Camera3D" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1276985998]
 fov = 90.0
-script = ExtResource("1_18j2g")
+script = ExtResource("2_lfjj6")
 
 [node name="GunAudio" type="AudioStreamPlayer3D" parent="MeshInstance3D/CharacterBody3D/Neck/Camera3D" unique_id=40472879]
-stream = ExtResource("4_4wng8")
+stream = ExtResource("3_wmfhc")
 
-[node name="pewpewpistolofdespair2" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1600705181 instance=ExtResource("1_gy32l")]
+[node name="pewpewpistolofdespair2" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1600705181 instance=ExtResource("4_7cmww")]
 transform = Transform3D(-0.025446704, 0, 0.49935204, 0, 0.5, 0, -0.49935204, 0, -0.025446704, 0.121917486, -0.79804087, -0.6181464)
 
-[node name="notverycowboyhat" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1619238862 instance=ExtResource("1_obynr")]
+[node name="notverycowboyhat" parent="MeshInstance3D/CharacterBody3D/Neck" unique_id=1619238862 instance=ExtResource("5_hkqka")]
 transform = Transform3D(-0.22857992, 0, 0.07463524, 0, 0.28, 0, -0.058713052, 0, -0.2905677, -0.019812405, 0.33749163, -0.038889766)
 
 [node name="Area3D" type="Area3D" parent="MeshInstance3D/CharacterBody3D" unique_id=813518941]
-script = ExtResource("2_u3olo")
+script = ExtResource("6_bqrc1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/CharacterBody3D/Area3D" unique_id=849495066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -345,7 +345,7 @@ mesh = SubResource("BoxMesh_yobb1")
 
 [node name="waterhouse" type="Node" parent="." unique_id=1298833414]
 
-[node name="WATERHOUSSSFIXED" parent="waterhouse" unique_id=94385544 instance=ExtResource("2_fb3t6")]
+[node name="WATERHOUSSSFIXED" parent="waterhouse" unique_id=94385544 instance=ExtResource("8_i3uv4")]
 transform = Transform3D(0.2660739, 0, 0, 0, 0.1829387, 0, 0, 0, 0.2107332, -5.797862, 2.4533286, -0.9276482)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="waterhouse/WATERHOUSSSFIXED" unique_id=816208013]
@@ -385,13 +385,13 @@ mesh = SubResource("BoxMesh_e886h")
 [node name="GridMap" type="GridMap" parent="." unique_id=1455233375]
 mesh_library = SubResource("MeshLibrary_e886h")
 
-[node name="table" parent="." unique_id=1769146467 instance=ExtResource("3_vd578")]
+[node name="table" parent="." unique_id=1769146467 instance=ExtResource("9_4oq76")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -5.7323804, 0.7844553, 1.2077402)
 
-[node name="chair" parent="." unique_id=745271942 instance=ExtResource("4_c7tqt")]
+[node name="chair" parent="." unique_id=745271942 instance=ExtResource("10_naeu8")]
 transform = Transform3D(-0.0073287855, 0, -0.19986568, 0, 0.2, 0, 0.19986568, 0, -0.0073287855, -5.178236, 0.7876054, 1.2616465)
 
-[node name="chair2" parent="." unique_id=2073724370 instance=ExtResource("4_c7tqt")]
+[node name="chair2" parent="." unique_id=2073724370 instance=ExtResource("10_naeu8")]
 transform = Transform3D(-0.028648442, 0, 0.19793755, 0, 0.2, 0, -0.19793755, 0, -0.028648442, -6.269348, 0.7876054, 1.3423764)
 
 [node name="table2" type="Node" parent="." unique_id=366678590]
@@ -400,12 +400,12 @@ transform = Transform3D(-0.028648442, 0, 0.19793755, 0, 0.2, 0, -0.19793755, 0, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61163807, 3.9280388, 4.52657)
 mesh = SubResource("SphereMesh_204hi")
 
-[node name="WATERmug" parent="." unique_id=1332201139 instance=ExtResource("5_nl27k")]
+[node name="WATERmug" parent="." unique_id=1332201139 instance=ExtResource("11_ocw5u")]
 transform = Transform3D(0.115, 0, 0, 0, 0.108, 0, 0, 0, 0.11094717, -5.621439, 1.2669035, 1.2622867)
 
 [node name="Citizen" type="CharacterBody3D" parent="." unique_id=1136624608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11779785, 0)
-script = ExtResource("7_ew7rt")
+script = ExtResource("12_wbb3i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen" unique_id=933185316]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
@@ -422,11 +422,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
 billboard = 1
 
 [node name="TalkAudio" type="AudioStreamPlayer3D" parent="Citizen" unique_id=912203757]
-stream = ExtResource("14_ltcqi")
+stream = ExtResource("16_gq0b6")
 
 [node name="Citizen2" type="CharacterBody3D" parent="." unique_id=761477915]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2431946, 0.11779785, 0)
-script = ExtResource("7_ew7rt")
+script = ExtResource("12_wbb3i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen2" unique_id=1218070737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
@@ -443,11 +443,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
 billboard = 1
 
 [node name="TalkAudio" type="AudioStreamPlayer3D" parent="Citizen2" unique_id=2126697298]
-stream = ExtResource("14_ltcqi")
+stream = ExtResource("16_gq0b6")
 
 [node name="Citizen3" type="CharacterBody3D" parent="." unique_id=721165983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5896356, 0.11779785, 0)
-script = ExtResource("7_ew7rt")
+script = ExtResource("12_wbb3i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Citizen3" unique_id=636889844]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053100586, 0.556, -0.0014906302)
@@ -464,17 +464,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4078565, 0)
 billboard = 1
 
 [node name="TalkAudio" type="AudioStreamPlayer3D" parent="Citizen3" unique_id=102566744]
-stream = ExtResource("14_ltcqi")
-
-[node name="Crosshair" type="Control" parent="." unique_id=62705327]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="CrosshairDot" type="Label" parent="Crosshair" unique_id=1209351940]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 24
-text = "+"
+stream = ExtResource("16_gq0b6")
